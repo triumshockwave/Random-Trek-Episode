@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4080CC72689875600FE06DF /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4080CC62689875600FE06DF /* ResultView.swift */; };
 		A4C6DDA22688776E00B21F32 /* Random_Trek_EpisodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */; };
 		A4C6DDA42688776E00B21F32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6DDA32688776E00B21F32 /* ContentView.swift */; };
 		A4C6DDA62688777200B21F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C6DDA52688777100B21F32 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4080CC62689875600FE06DF /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		A4C6DD9E2688776E00B21F32 /* Random Trek Episode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random Trek Episode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_Trek_EpisodeApp.swift; sourceTree = "<group>"; };
 		A4C6DDA32688776E00B21F32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				A4C6DDB52688790400B21F32 /* Random Trek Episode.entitlements */,
 				A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */,
 				A4C6DDA32688776E00B21F32 /* ContentView.swift */,
+				A4080CC62689875600FE06DF /* ResultView.swift */,
 				A4C6DDA52688777100B21F32 /* Assets.xcassets */,
 				A4C6DDAA2688777200B21F32 /* Info.plist */,
 				A4C6DDA72688777200B21F32 /* Preview Content */,
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4080CC72689875600FE06DF /* ResultView.swift in Sources */,
 				A4C6DDA42688776E00B21F32 /* ContentView.swift in Sources */,
 				A4C6DDB2268877BA00B21F32 /* Episode.swift in Sources */,
 				A4C6DDB42688780200B21F32 /* Series.swift in Sources */,
@@ -287,6 +291,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Random Trek Episode/Random Trek Episode.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Random Trek Episode/Preview Content\"";
 				DEVELOPMENT_TEAM = PFR4DE3555;
 				ENABLE_PREVIEWS = YES;
@@ -311,6 +316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Random Trek Episode/Random Trek Episode.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Random Trek Episode/Preview Content\"";
 				DEVELOPMENT_TEAM = PFR4DE3555;
 				ENABLE_PREVIEWS = YES;
