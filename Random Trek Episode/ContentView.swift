@@ -17,8 +17,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView() {
             VStack() {
-                Group {
-                    Form() {
+                Form() {
+                    Section(header: Text("Series Selection")) {
                         Toggle(isOn: $TOS) {
                             Text("TOS")
                         }
@@ -40,8 +40,8 @@ struct ContentView: View {
                             .frame(maxWidth: .infinity)
                     }
                 }
+
             }
-            Spacer()
         }
         .padding()
         .navigationTitle("Random Trek Episode")
