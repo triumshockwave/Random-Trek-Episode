@@ -23,21 +23,41 @@ struct ResultView: View {
     
     var body: some View {
         VStack() {
-            List() {
-                Text(series)
-                Text("Season " + String(season) + ", Episode " + String(episodeNumber))
-                Text(title)
+            HStack {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(series)
+                        .font(.title)
+                        .fontWeight(.black)
+                    Text("Season \(String(season))")
+                    Text("Episode \(String(episodeNumber))")
+                    Text(title)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding(.top, 10.0)
+                }
+                Spacer()
             }
-            Button(action: { generateRandomEpisode() }) {
-                Text("Engage")
-                    .padding()
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
-                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
-                    .clipShape(Capsule())
+            Spacer()
+            ZStack() {
+                Button(action: { generateRandomEpisode() }) {
+                    Text("Engage")
+                        .padding()
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                        .clipShape(Capsule())
+                }
+                HStack(alignment: .center) {
+                    Spacer()
+                    Image(systemName: "gear")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                }
             }
+
             Divider()
             Text("Random Number: \(String(number))")
         }
+        .padding()
         .navigationTitle(Text("Result"))
     }
 }
@@ -45,13 +65,13 @@ struct ResultView: View {
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView() {
-            ResultView()
+            ResultView().navigationBarHidden(true)
         }
         .previewDevice("iPhone 12")
         .preferredColorScheme(.dark)
 
         NavigationView() {
-            ResultView()
+            ResultView().navigationBarHidden(true)
         }
         .previewDevice("iPhone 12")
         .preferredColorScheme(.light)

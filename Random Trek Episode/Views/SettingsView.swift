@@ -16,13 +16,17 @@ struct SettingsView: View {
     @State private var dscState = true
     @State private var picState = true
     @State private var ldState = true
-    
     @State private var isShowingResult = true
     
     var body: some View {
         NavigationView() {
             VStack() {
                 Text("Random Trek Episode")
+                    .font(.title3)
+                    .fontWeight(.heavy)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
                 Form() {
                     Section(header: Text("Series Selection")) {
                         Toggle(isOn: $tosState) {
@@ -50,14 +54,16 @@ struct SettingsView: View {
                             Text("LD")
                         }
                     }
-                    Button(action: { isShowingResult.toggle() }) {
-                        Text("Show/Hide Result")
-                    }
                 }
                 .navigationTitle(Text(""))
                 .navigationBarHidden(true)
+                
+                NavigationLink(destination: ResultView().navigationBarHidden(true), isActive: $isShowingResult) {
+                    Button(action: { isShowingResult.toggle() }) {
+                        Text("Engage")
+                    }
+                }
             }
-            NavigationLink(destination: ResultView().navigationBarHidden(true), isActive: $isShowingResult) { EmptyView() }
         }
         .padding()
         .navigationBarHidden(true)
