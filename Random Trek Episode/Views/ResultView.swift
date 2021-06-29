@@ -42,15 +42,20 @@ struct ResultView: View {
                 Button(action: { generateRandomEpisode() }) {
                     Text("Engage")
                         .padding()
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
-                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(Color.white)
+                        .background(Color.blue)
                         .clipShape(Capsule())
                 }
-                HStack(alignment: .center) {
-                    Spacer()
-                    Image(systemName: "gear")
-                        .resizable()
-                        .frame(width: 30, height: 30)
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        Button(action: { self.presentation.wrappedValue.dismiss() }) {
+                            Image(systemName: "gear")
+                                .resizable()
+                                .foregroundColor(Color.primary)
+                                .frame(width: 30, height: 30)
+                        }
+                    }
                 }
             }
 

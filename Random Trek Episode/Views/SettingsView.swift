@@ -59,8 +59,16 @@ struct SettingsView: View {
                 .navigationBarHidden(true)
                 
                 NavigationLink(destination: ResultView().navigationBarHidden(true), isActive: $isShowingResult) {
-                    Button(action: { isShowingResult.toggle() }) {
-                        Text("Engage")
+                    if UIDevice.current.userInterfaceIdiom == .phone {
+                        Button(action: { isShowingResult.toggle() }) {
+                            Text("Engage")
+                                .padding()
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                                .clipShape(Capsule())
+                        }
+                    } else {
+                        EmptyView()
                     }
                 }
             }
