@@ -40,10 +40,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4872C55268AA19300412797 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4C6DDA32688776E00B21F32 /* ContentView.swift */,
+				A4080CC62689875600FE06DF /* ResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A4C6DD952688776E00B21F32 = {
 			isa = PBXGroup;
 			children = (
-				A4C6DDB0268877AB00B21F32 /* Model */,
 				A4C6DDA02688776E00B21F32 /* Random Trek Episode */,
 				A4C6DD9F2688776E00B21F32 /* Products */,
 			);
@@ -60,10 +68,10 @@
 		A4C6DDA02688776E00B21F32 /* Random Trek Episode */ = {
 			isa = PBXGroup;
 			children = (
-				A4C6DDB52688790400B21F32 /* Random Trek Episode.entitlements */,
+				A4872C55268AA19300412797 /* Views */,
+				A4C6DDB0268877AB00B21F32 /* Model */,
 				A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */,
-				A4C6DDA32688776E00B21F32 /* ContentView.swift */,
-				A4080CC62689875600FE06DF /* ResultView.swift */,
+				A4C6DDB52688790400B21F32 /* Random Trek Episode.entitlements */,
 				A4C6DDA52688777100B21F32 /* Assets.xcassets */,
 				A4C6DDAA2688777200B21F32 /* Info.plist */,
 				A4C6DDA72688777200B21F32 /* Preview Content */,
