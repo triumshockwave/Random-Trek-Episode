@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct ResultView: View {
+    @Environment(\.presentationMode) var presentation
+    
     @State private var series = "Star Trek"
     @State private var season = 1
     @State private var episodeNumber = 1
     @State private var title = "The Man Trap"
+    
+    @State private var number = Int.random(in: 0...9999)
+    
+    func generateRandomEpisode() {
+        number = Int.random(in: 0...9999)
+    }
     
     var body: some View {
         VStack() {
@@ -20,15 +28,32 @@ struct ResultView: View {
                 Text("Season " + String(season) + ", Episode " + String(episodeNumber))
                 Text(title)
             }
+            Button(action: { generateRandomEpisode() }) {
+                Text("Engage")
+                    .padding()
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                    .clipShape(Capsule())
+            }
+            Divider()
+            Text("Random Number: \(String(number))")
         }
+        .navigationTitle(Text("Result"))
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
+struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView()
-            .preferredColorScheme(.dark)
-        ResultView()
-            .preferredColorScheme(.light)
+        NavigationView() {
+            ResultView()
+        }
+        .previewDevice("iPhone 12")
+        .preferredColorScheme(.dark)
+
+        NavigationView() {
+            ResultView()
+        }
+        .previewDevice("iPhone 12")
+        .preferredColorScheme(.light)
     }
 }

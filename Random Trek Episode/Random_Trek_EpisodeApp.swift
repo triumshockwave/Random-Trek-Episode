@@ -12,7 +12,7 @@ struct Random_Trek_EpisodeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SettingsView()
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SettingsView: View {
     @State private var tosState = true
     @State private var tngState = true
     @State private var ds9State = true
@@ -17,9 +17,12 @@ struct ContentView: View {
     @State private var picState = true
     @State private var ldState = true
     
+    @State private var isShowingResult = true
+    
     var body: some View {
         NavigationView() {
             VStack() {
+                Text("Random Trek Episode")
                 Form() {
                     Section(header: Text("Series Selection")) {
                         Toggle(isOn: $tosState) {
@@ -47,25 +50,26 @@ struct ContentView: View {
                             Text("LD")
                         }
                     }
-                    NavigationLink(destination: ResultView()) {
-                        Text("Engage")
-                            .frame(maxWidth: .infinity)
+                    Button(action: { isShowingResult.toggle() }) {
+                        Text("Show/Hide Result")
                     }
                 }
-                .navigationTitle(Text("Setup"))
+                .navigationTitle(Text(""))
+                .navigationBarHidden(true)
             }
+            NavigationLink(destination: ResultView().navigationBarHidden(true), isActive: $isShowingResult) { EmptyView() }
         }
         .padding()
-        .navigationTitle("Random Trek Episode")
+        .navigationBarHidden(true)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SettingsView()
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 12")
-        ContentView()
+        SettingsView()
             .preferredColorScheme(.light)
             .previewDevice("iPhone 12")
     }
