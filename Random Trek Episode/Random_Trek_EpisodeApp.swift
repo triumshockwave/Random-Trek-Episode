@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct Random_Trek_EpisodeApp: App {
+    @StateObject var applicationOptions = Options()
     
     var body: some Scene {
         WindowGroup {

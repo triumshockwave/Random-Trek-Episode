@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ResultView: View {
     @Environment(\.presentationMode) var presentation
+    @EnvironmentObject var applicationOptions: Options
     
     @State private var series = "Star Trek"
     @State private var season = 1
@@ -16,9 +17,44 @@ struct ResultView: View {
     @State private var title = "The Man Trap"
     
     @State private var number = Int.random(in: 0...9999)
+    @State private var enabledSeriesString: String = ""
     
     func generateRandomEpisode() {
         number = Int.random(in: 0...9999)
+        
+        var enabledSeriesList: [String] = []
+        
+        if applicationOptions.tosSelected {
+            enabledSeriesList.append("TOS")
+        }
+        if applicationOptions.tasSelected {
+            enabledSeriesList.append("TAS")
+        }
+        if applicationOptions.tngSelected {
+            enabledSeriesList.append("TNG")
+        }
+        if applicationOptions.ds9Selected {
+            enabledSeriesList.append("DS9")
+        }
+        if applicationOptions.voySelected {
+            enabledSeriesList.append("VOY")
+        }
+        if applicationOptions.entSelected {
+            enabledSeriesList.append("ENT")
+        }
+        if applicationOptions.dscSelected {
+            enabledSeriesList.append("DSC")
+        }
+        if applicationOptions.picSelected {
+            enabledSeriesList.append("PIC")
+        }
+        if applicationOptions.ldSelected {
+            enabledSeriesList.append("LD")
+        }
+        
+        for i in 0..<enabledSeriesList.count {
+            enabledSeriesString.append("\(enabledSeriesList[i]) ")
+        }
     }
     
     var body: some View {
@@ -61,6 +97,7 @@ struct ResultView: View {
 
             Divider()
             Text("Random Number: \(String(number))")
+            Text("Enabled Series: \(enabledSeriesString)")
         }
         .padding()
         .navigationTitle(Text("Result"))

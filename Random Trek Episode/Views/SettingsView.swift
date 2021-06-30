@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var applicationOptions: Options
+    
     @State private var tosState = true
+    @State private var tasState = true
     @State private var tngState = true
     @State private var ds9State = true
     @State private var voyState = true
@@ -29,28 +32,31 @@ struct SettingsView: View {
                     
                 Form() {
                     Section(header: Text("Series Selection")) {
-                        Toggle(isOn: $tosState) {
+                        Toggle(isOn: $applicationOptions.tosSelected) {
                             Text("TOS")
                         }
-                        Toggle(isOn: $tngState) {
+                        Toggle(isOn: $applicationOptions.tasSelected) {
+                            Text("TAS")
+                        }
+                        Toggle(isOn: $applicationOptions.tngSelected) {
                             Text("TNG")
                         }
-                        Toggle(isOn: $ds9State) {
+                        Toggle(isOn: $applicationOptions.ds9Selected) {
                             Text("DS9")
                         }
-                        Toggle(isOn: $voyState) {
+                        Toggle(isOn: $applicationOptions.voySelected) {
                             Text("VOY")
                         }
-                        Toggle(isOn: $entState) {
+                        Toggle(isOn: $applicationOptions.entSelected) {
                             Text("ENT")
                         }
-                        Toggle(isOn: $dscState) {
+                        Toggle(isOn: $applicationOptions.dscSelected) {
                             Text("DSC")
                         }
-                        Toggle(isOn: $picState) {
+                        Toggle(isOn: $applicationOptions.picSelected) {
                             Text("PIC")
                         }
-                        Toggle(isOn: $ldState) {
+                        Toggle(isOn: $applicationOptions.ldSelected) {
                             Text("LD")
                         }
                     }

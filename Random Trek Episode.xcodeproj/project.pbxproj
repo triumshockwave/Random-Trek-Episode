@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		A4080CC72689875600FE06DF /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4080CC62689875600FE06DF /* ResultView.swift */; };
+		A478C947268BEB8B008C1783 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478C946268BEB8B008C1783 /* Options.swift */; };
 		A4872C56268AB97400412797 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6DDA32688776E00B21F32 /* SettingsView.swift */; };
 		A4C6DDA22688776E00B21F32 /* Random_Trek_EpisodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */; };
 		A4C6DDA62688777200B21F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C6DDA52688777100B21F32 /* Assets.xcassets */; };
 		A4C6DDA92688777200B21F32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C6DDA82688777200B21F32 /* Preview Assets.xcassets */; };
 		A4C6DDB2268877BA00B21F32 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6DDB1268877BA00B21F32 /* Episode.swift */; };
-		A4C6DDB42688780200B21F32 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6DDB32688780200B21F32 /* Series.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4080CC62689875600FE06DF /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		A478C946268BEB8B008C1783 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		A4C6DD9E2688776E00B21F32 /* Random Trek Episode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random Trek Episode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_Trek_EpisodeApp.swift; sourceTree = "<group>"; };
 		A4C6DDA32688776E00B21F32 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		A4C6DDA82688777200B21F32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4C6DDAA2688777200B21F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4C6DDB1268877BA00B21F32 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
-		A4C6DDB32688780200B21F32 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		A4C6DDB52688790400B21F32 /* Random Trek Episode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Random Trek Episode.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,9 +68,9 @@
 		A4C6DDA02688776E00B21F32 /* Random Trek Episode */ = {
 			isa = PBXGroup;
 			children = (
+				A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */,
 				A4872C55268AA19300412797 /* Views */,
 				A4C6DDB0268877AB00B21F32 /* Model */,
-				A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */,
 				A4C6DDB52688790400B21F32 /* Random Trek Episode.entitlements */,
 				A4C6DDA52688777100B21F32 /* Assets.xcassets */,
 				A4C6DDAA2688777200B21F32 /* Info.plist */,
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A4C6DDB1268877BA00B21F32 /* Episode.swift */,
-				A4C6DDB32688780200B21F32 /* Series.swift */,
+				A478C946268BEB8B008C1783 /* Options.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 				A4080CC72689875600FE06DF /* ResultView.swift in Sources */,
 				A4872C56268AB97400412797 /* SettingsView.swift in Sources */,
 				A4C6DDB2268877BA00B21F32 /* Episode.swift in Sources */,
-				A4C6DDB42688780200B21F32 /* Series.swift in Sources */,
+				A478C947268BEB8B008C1783 /* Options.swift in Sources */,
 				A4C6DDA22688776E00B21F32 /* Random_Trek_EpisodeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
