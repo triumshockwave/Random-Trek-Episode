@@ -12,4 +12,11 @@ struct Episode {
     var series: String
     var season: Int
     var number: Int
+    
+    init(title: String, series: String, season: Int, number: Int) {
+        self.title = title
+        self.series = series
+        self.season = season
+        self.number = number
+    }
 }

@@ -16,11 +16,12 @@ struct ResultView: View {
     @State private var episodeNumber = 1
     @State private var title = "The Man Trap"
     
-    @State private var number = Int.random(in: 0...9999)
-    @State private var enabledSeriesString: String = ""
+    private var number = Int.random(in: 0...9999)
+    private var enabledSeriesString: String = ""
     
-    func generateRandomEpisode() {
+    mutating func generateRandomEpisode() {
         number = Int.random(in: 0...9999)
+        print("Random Number: \(number)")
         
         var enabledSeriesList: [String] = []
         
@@ -52,9 +53,12 @@ struct ResultView: View {
             enabledSeriesList.append("LD")
         }
         
+        enabledSeriesString = ""
         for i in 0..<enabledSeriesList.count {
             enabledSeriesString.append("\(enabledSeriesList[i]) ")
         }
+        
+        print("Enabled series: \(enabledSeriesList)")
     }
     
     var body: some View {
@@ -95,9 +99,9 @@ struct ResultView: View {
                 }
             }
 
-            Divider()
-            Text("Random Number: \(String(number))")
-            Text("Enabled Series: \(enabledSeriesString)")
+//            Divider()
+//            Text("Random Number: \(String(number))")
+//            Text("Enabled Series: \(enabledSeriesString)")
         }
         .padding()
         .navigationTitle(Text("Result"))
