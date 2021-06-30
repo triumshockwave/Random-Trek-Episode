@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Episode {
+class Episode: ObservableObject {
     var title: String
     var series: String
     var season: Int

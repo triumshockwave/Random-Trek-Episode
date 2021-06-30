@@ -21,6 +21,12 @@ struct SettingsView: View {
     @State private var ldState = true
     @State private var isShowingResult = true
     
+    init() {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            isShowingResult = false
+        }
+    }
+    
     var body: some View {
         NavigationView() {
             VStack() {
@@ -61,11 +67,11 @@ struct SettingsView: View {
                         }
                     }
                 }
-                .navigationTitle(Text(""))
-                .navigationBarHidden(true)
+                .navigationTitle(Text("Settings"))
+                .navigationBarHidden(false)
                 
-                NavigationLink(destination: ResultView().navigationBarHidden(true), isActive: $isShowingResult) {
-                    if UIDevice.current.userInterfaceIdiom == .phone {
+                NavigationLink(destination: ResultView(), isActive: $isShowingResult) {
+                    if !isShowingResult {
                         Button(action: { isShowingResult.toggle() }) {
                             Text("Engage")
                                 .padding()
@@ -80,16 +86,20 @@ struct SettingsView: View {
             }
         }
         .padding()
-        .navigationBarHidden(true)
+        .navigationBarHidden(false)
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .environmentObject(Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1))
+            .environmentObject(Options())
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 12")
         SettingsView()
+            .environmentObject(Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1))
+            .environmentObject(Options())
             .preferredColorScheme(.light)
             .previewDevice("iPhone 12")
     }

@@ -10,17 +10,19 @@ import SwiftUI
 struct ResultView: View {
     @Environment(\.presentationMode) var presentation
     @EnvironmentObject var applicationOptions: Options
+    @State private var chosenEpisode = Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1)
     
-    @State private var series = "Star Trek"
-    @State private var season = 1
-    @State private var episodeNumber = 1
-    @State private var title = "The Man Trap"
-    
-    private var number = Int.random(in: 0...9999)
-    private var enabledSeriesString: String = ""
-    
-    mutating func generateRandomEpisode() {
-        number = Int.random(in: 0...9999)
+//    @State private var series = "Star Trek"
+//    @State private var season = 1
+//    @State private var episodeNumber = 1
+//    @State private var title = "The Man Trap"
+        
+    func generateRandomEpisode() {
+        
+        #if DEBUG
+        let number = Int.random(in: 0...9999)
+        var enabledSeriesString = ""
+        
         print("Random Number: \(number)")
         
         var enabledSeriesList: [String] = []
@@ -53,24 +55,24 @@ struct ResultView: View {
             enabledSeriesList.append("LD")
         }
         
-        enabledSeriesString = ""
         for i in 0..<enabledSeriesList.count {
             enabledSeriesString.append("\(enabledSeriesList[i]) ")
         }
         
         print("Enabled series: \(enabledSeriesList)")
+        #endif
     }
     
     var body: some View {
         VStack() {
             HStack {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(series)
+                    Text(chosenEpisode.series)
                         .font(.title)
                         .fontWeight(.black)
-                    Text("Season \(String(season))")
-                    Text("Episode \(String(episodeNumber))")
-                    Text(title)
+                    Text("Season \(String(chosenEpisode.season))")
+                    Text("Episode \(String(chosenEpisode.number))")
+                    Text(chosenEpisode.title)
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.top, 10.0)
@@ -86,25 +88,21 @@ struct ResultView: View {
                         .background(Color.blue)
                         .clipShape(Capsule())
                 }
-                if UIDevice.current.userInterfaceIdiom == .phone {
-                    HStack(alignment: .center) {
-                        Spacer()
-                        Button(action: { self.presentation.wrappedValue.dismiss() }) {
-                            Image(systemName: "gear")
-                                .resizable()
-                                .foregroundColor(Color.primary)
-                                .frame(width: 30, height: 30)
-                        }
-                    }
-                }
+//                if UIDevice.current.userInterfaceIdiom == .phone {
+//                    HStack(alignment: .center) {
+//                        Spacer()
+//                        Button(action: { self.presentation.wrappedValue.dismiss() }) {
+//                            Image(systemName: "gear")
+//                                .resizable()
+//                                .foregroundColor(Color.primary)
+//                                .frame(width: 30, height: 30)
+//                        }
+//                    }
+//                }
             }
-
-//            Divider()
-//            Text("Random Number: \(String(number))")
-//            Text("Enabled Series: \(enabledSeriesString)")
         }
         .padding()
-        .navigationTitle(Text("Result"))
+        .navigationTitle(Text("Your Mission:"))
     }
 }
 
@@ -112,12 +110,14 @@ struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView() {
             ResultView().navigationBarHidden(true)
+                .environmentObject(Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1))
         }
         .previewDevice("iPhone 12")
         .preferredColorScheme(.dark)
 
         NavigationView() {
             ResultView().navigationBarHidden(true)
+                .environmentObject(Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1))
         }
         .previewDevice("iPhone 12")
         .preferredColorScheme(.light)
