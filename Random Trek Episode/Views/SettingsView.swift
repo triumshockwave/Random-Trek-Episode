@@ -76,12 +76,13 @@ struct SettingsView: View {
                         EmptyView()
                     }
                 }
-                .onAppear() {
-                    // Make sure the preview actually shows the Settings view instead of pushing Results in front of it
-                    if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
-                        isShowingResult = false
-                    }
-                }
+            }
+        }
+        .onAppear() {
+            if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
+                isShowingResult = false
+            } else {
+                isShowingResult = true
             }
         }
         .padding()
@@ -94,12 +95,10 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-            .environmentObject(Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1))
             .environmentObject(Options())
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 12")
         SettingsView()
-            .environmentObject(Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1))
             .environmentObject(Options())
             .preferredColorScheme(.light)
             .previewDevice("iPhone 12")
