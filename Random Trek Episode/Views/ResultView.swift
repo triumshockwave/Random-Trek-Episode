@@ -11,6 +11,42 @@ struct ResultView: View {
     @Environment(\.presentationMode) var presentation
     @EnvironmentObject var applicationOptions: Options
     @State private var chosenEpisode = Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1)
+    var episodeList: [Episode] = []
+    
+    init() {
+        createIncludedEpisodes(with: applicationOptions)
+    }
+    
+    mutating func createIncludedEpisodes(with options: Options) {
+        if options.tosSelected {
+            let tosSeries = createSeries(for: "Star Trek")
+            for episode in tosSeries.episodes {
+                episodeList.append(episode)
+            }
+        }
+        if options.tngSelected {
+            let tngSeries = createSeries(for: "Star Trek: The Next Generation")
+            for episode in tngSeries.episodes {
+                episodeList.append(episode)
+            }
+        }
+    }
+    
+    func createSeries(for seriesName: String) -> Series {
+        var episodeList: [Episode] = []
+        
+        if seriesName == "Star Trek" {
+            episodeList.append(Episode(title: "The Man Trap", series: seriesName, season: 1, number: 1))
+            episodeList.append(Episode(title: "Charlie X", series: seriesName, season: 1, number: 2))
+        }
+        
+        if seriesName == "Star Trek: The Next Generation" {
+            episodeList.append(Episode(title: "Encounter At Farpoint", series: seriesName, season: 1, number: 1))
+            episodeList.append(Episode(title: "The Naked Now", series: seriesName, season: 1, number: 3))
+        }
+
+        return Series(episodes: episodeList)
+    }
     
 //    @State private var series = "Star Trek"
 //    @State private var season = 1
@@ -18,9 +54,10 @@ struct ResultView: View {
 //    @State private var title = "The Man Trap"
         
     func generateRandomEpisode() {
+        let number = Int.random(in: 0...episodeli)
+
         
         #if DEBUG
-        let number = Int.random(in: 0...9999)
         var enabledSeriesString = ""
         
         print("Random Number: \(number)")
