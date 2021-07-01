@@ -68,6 +68,21 @@ struct ResultView: View {
         return Series(episodes: episodeList)
     }
     
+    func parseEpisodes(for series: String) -> [Episode] {
+        var episodes: [Episode] = []
+        let filePath = Bundle.main.url(forResource: series, withExtension: "txt")
+        var fileContent = ""
+        let pathString = filePath?.absoluteString ?? ""
+        
+        do {
+                try fileContent = String(contentsOfFile: pathString, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+        } catch {
+            print("Error reading file content")
+        }
+        
+        return episodes
+    }
+    
     func createIncludedEpisodes(with options: Options) -> [Episode] {
         var episodeList: [Episode] = []
         

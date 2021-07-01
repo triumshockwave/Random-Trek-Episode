@@ -27,13 +27,7 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView() {
-            VStack() {
-//                Text("Random Trek Episode")
-//                    .font(.title3)
-//                    .fontWeight(.heavy)
-//                    .multilineTextAlignment(.leading)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-                    
+            VStack() {                    
                 Form() {
                     Section(header: Text("Series Selection")) {
                         Toggle(isOn: $applicationOptions.tosSelected) {
