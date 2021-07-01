@@ -12,24 +12,6 @@ struct ResultView: View {
     @EnvironmentObject var applicationOptions: Options
     
     @State private var chosenEpisode = Episode(title: "Episode Name", series: "Series Name", season: 0, number: 0)
-    @State private var episodeList: [Episode] = []
-    
-    func createIncludedEpisodes(with options: Options) {
-        episodeList = []
-        
-        if options.tosSelected {
-            let tosSeries = createSeries(for: "Star Trek")
-            for episode in tosSeries.episodes {
-                episodeList.append(episode)
-            }
-        }
-        if options.tngSelected {
-            let tngSeries = createSeries(for: "Star Trek: The Next Generation")
-            for episode in tngSeries.episodes {
-                episodeList.append(episode)
-            }
-        }
-    }
     
     func createSeries(for seriesName: String) -> Series {
         var episodeList: [Episode] = []
@@ -39,21 +21,120 @@ struct ResultView: View {
             episodeList.append(Episode(title: "Charlie X", series: seriesName, season: 1, number: 2))
         }
         
+        if seriesName == "Star Trek: The Animated Series" {
+            episodeList.append(Episode(title: "Beyond the Farthest Star", series: seriesName, season: 1, number: 1))
+            episodeList.append(Episode(title: "Yesteryear", series: seriesName, season: 1, number: 2))
+        }
+        
         if seriesName == "Star Trek: The Next Generation" {
             episodeList.append(Episode(title: "Encounter At Farpoint", series: seriesName, season: 1, number: 1))
             episodeList.append(Episode(title: "The Naked Now", series: seriesName, season: 1, number: 3))
+        }
+        
+        if seriesName == "Star Trek: Deep Space Nine" {
+            episodeList.append(Episode(title: "Emissary", series: seriesName, season: 1, number: 1))
+            episodeList.append(Episode(title: "Past Prologue", series: seriesName, season: 1, number: 3))
+        }
+        
+        if seriesName == "Star Trek: Voyager" {
+            episodeList.append(Episode(title: "Caretaker", series: seriesName, season: 1, number: 1))
+            episodeList.append(Episode(title: "Parallax", series: seriesName, season: 1, number: 3))
+        }
+        
+        if seriesName == "Star Trek: Enterprise" {
+            episodeList.append(Episode(title: "Broken Bow", series: seriesName, season: 1, number: 1))
+            episodeList.append(Episode(title: "Fight or Flight", series: seriesName, season: 1, number: 3))
+        }
+        
+        if seriesName == "Star Trek: Discovery" {
+            episodeList.append(Episode(title: "The Vulcan Hello", series: seriesName, season: 1, number: 1))
+            episodeList.append(Episode(title: "Battle at the Binary Stars", series: seriesName, season: 1, number: 2))
+        }
+        
+        if seriesName == "Star Trek: Picard" {
+            episodeList.append(Episode(title: "Remembrance", series: seriesName, season: 1, number: 1))
+            episodeList.append(Episode(title: "Maps and Legends", series: seriesName, season: 1, number: 2))
+        }
+        
+        if seriesName == "Star Trek: Lower Decks" {
+            episodeList.append(Episode(title: "Second Contact", series: seriesName, season: 1, number: 1))
+            episodeList.append(Episode(title: "Envoys", series: seriesName, season: 1, number: 2))
         }
 
         return Series(episodes: episodeList)
     }
     
-//    @State private var series = "Star Trek"
-//    @State private var season = 1
-//    @State private var episodeNumber = 1
-//    @State private var title = "The Man Trap"
+    func createIncludedEpisodes(with options: Options) -> [Episode] {
+        var episodeList: [Episode] = []
+        
+        if options.tosSelected {
+            let series = createSeries(for: "Star Trek")
+            for episode in series.episodes {
+                episodeList.append(episode)
+            }
+        }
+        
+        if options.tasSelected {
+            let series = createSeries(for: "Star Trek: The Animated Series")
+            for episode in series.episodes {
+                episodeList.append(episode)
+            }
+        }
+        
+        if options.tngSelected {
+            let series = createSeries(for: "Star Trek: The Next Generation")
+            for episode in series.episodes {
+                episodeList.append(episode)
+            }
+        }
+        
+        if options.ds9Selected {
+            let series = createSeries(for: "Star Trek: Deep Space Nine")
+            for episode in series.episodes {
+                episodeList.append(episode)
+            }
+        }
+        
+        if options.voySelected {
+            let series = createSeries(for: "Star Trek: Voyager")
+            for episode in series.episodes {
+                episodeList.append(episode)
+            }
+        }
+        
+        if options.entSelected {
+            let series = createSeries(for: "Star Trek: Enterprise")
+            for episode in series.episodes {
+                episodeList.append(episode)
+            }
+        }
+        
+        if options.dscSelected {
+            let series = createSeries(for: "Star Trek: Discovery")
+            for episode in series.episodes {
+                episodeList.append(episode)
+            }
+        }
+        
+        if options.picSelected {
+            let series = createSeries(for: "Star Trek: Picard")
+            for episode in series.episodes {
+                episodeList.append(episode)
+            }
+        }
+        
+        if options.ldSelected {
+            let series = createSeries(for: "Star Trek: Lower Decks")
+            for episode in series.episodes {
+                episodeList.append(episode)
+            }
+        }
+        
+        return episodeList
+    }
         
     func generateRandomEpisode() -> Episode {
-        createIncludedEpisodes(with: applicationOptions)
+        let episodeList = createIncludedEpisodes(with: applicationOptions)
         let number = Int.random(in: 0..<episodeList.count)
         
         #if DEBUG
