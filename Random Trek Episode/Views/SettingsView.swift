@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    //MARK: - Properties
+    
     @EnvironmentObject var applicationOptions: Options
     
     @State private var tosState = true
@@ -26,6 +28,8 @@ struct SettingsView: View {
             isShowingResult = false
         }
     }
+    
+    //MARK: - View hierarchy
     
     var body: some View {
         NavigationView() {
@@ -90,6 +94,8 @@ struct SettingsView: View {
         .navigationBarHidden(false)
     }
 }
+
+//MARK: - Previews
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {

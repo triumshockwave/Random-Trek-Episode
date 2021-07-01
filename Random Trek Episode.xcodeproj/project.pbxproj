@@ -51,6 +51,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A496A5E7268D910E00A76FD3 /* App Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "App Logic";
+			sourceTree = "<group>";
+		};
 		A4C6DD952688776E00B21F32 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +79,7 @@
 			children = (
 				A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */,
 				A4872C55268AA19300412797 /* Views */,
+				A496A5E7268D910E00A76FD3 /* App Logic */,
 				A4C6DDB0268877AB00B21F32 /* Model */,
 				A4C6DDB52688790400B21F32 /* Random Trek Episode.entitlements */,
 				A4C6DDA52688777100B21F32 /* Assets.xcassets */,

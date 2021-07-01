@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ResultView: View {
+    //MARK: - Properties
+    
     @Environment(\.presentationMode) var presentation
     @EnvironmentObject var applicationOptions: Options
     
     @State private var chosenEpisode = Episode(title: "Episode Name", series: "Series Name", season: 0, number: 0)
+    
+    //MARK: - App logic methods
     
     func createSeries(for seriesName: String) -> Series {
         var episodeList: [Episode] = []
@@ -182,6 +186,8 @@ struct ResultView: View {
         return episodeList[number]
     }
     
+    //MARK: - View hierarchy
+    
     var body: some View {
         VStack() {
             HStack {
@@ -216,6 +222,8 @@ struct ResultView: View {
         .navigationTitle(Text("Your Mission:"))
     }
 }
+
+//MARK: - Previews
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
