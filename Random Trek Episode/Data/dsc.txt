@@ -1,0 +1,42 @@
+The Vulcan Hello	1x01	101	1207.3	2017-09-24
+Battle at the Binary Stars	1x02	102	1207.3	2017-09-24
+Context Is for Kings	1x03	103	Unknown	2017-10-01
+The Butcher's Knife Cares Not for the Lamb's Cry	1x04	104	Unknown	2017-10-08
+Choose Your Pain	1x05	105	Unknown	2017-10-15
+Lethe	1x06	106	Unknown	2017-10-22
+Magic to Make the Sanest Man Go Mad	1x07	107	2136.8-2137.2	2017-10-29
+Si Vis Pacem, Para Bellum	1x08	108	1308.9	2017-11-05
+Into the Forest I Go	1x09	109	Unknown	2017-11-12
+Despite Yourself	1x10	110	Unknown	2018-01-07
+The Wolf Inside	1x11	111	Unknown	2018-01-14
+Vaulting Ambition	1x12	112	Unknown	2018-01-21
+What's Past Is Prologue	1x13	113	1834.2	2018-01-28
+The War Without, The War Within	1x14	114	Unknown	2018-02-04
+Will You Take My Hand?	1x15	115	Unknown	2018-02-11
+Brother	2x01	201	1025.19	2019-01-17
+New Eden	2x02	202	1027.32	2019-01-24
+Point of Light	2x03	203	1029.46	2019-01-31
+An Obol for Charon	2x04	204	1834.2512	2019-02-07
+Saints of Imperfection	2x05	205	Unknown	2019-02-14
+The Sound of Thunder	2x06	206	1035.86	2019-02-21
+Light and Shadows	2x07	207	Unknown	2019-02-28
+If Memory Serves	2x08	208	1532.9	2019-03-07
+Project Daedalus	2x09	209	Unknown	2019-03-14
+The Red Angel	2x10	210	Unknown	2019-03-21
+Perpetual Infinity	2x11	211	Unknown	2019-03-28
+Through the Valley of Shadows	2x12	212	1048.66	2019-04-04
+Such Sweet Sorrow	2x13	213	1050.8-1051.8	2019-04-11
+Such Sweet Sorrow, Part 2	2x14	214	1201.7	2019-04-18
+That Hope Is You, Part 1	3x01	301	Unknown	2020-10-15
+Far From Home	3x02	302	Unknown	2020-10-22
+People of Earth	3x03	303	865211.3	2020-10-29
+Forget Me Not	3x04	304	Unknown	2020-11-05
+Die Trying	3x05	305	Unknown	2020-11-12
+Scavengers	3x06	306	Unknown	2020-11-19
+Unification III	3x07	307	Unknown	2020-11-26
+The Sanctuary	3x08	308	Unknown	2020-12-03
+Terra Firma, Part 1	3x09	309	Unknown	2020-12-10
+Terra Firma, Part 2	3x10	310	Unknown	2020-12-17
+Su'Kal	3x11	311	Unknown	2020-12-24
+There Is A Tide...	3x12	312	Unknown	2020-12-31
+That Hope Is You, Part 2	3x13	313	Unknown	2021-01-07

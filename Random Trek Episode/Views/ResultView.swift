@@ -15,7 +15,16 @@ struct ResultView: View {
     
     @State private var chosenEpisode = Episode(title: "Episode Name", series: "Series Name", season: 0, number: 0)
     
-    let seriesMapping: [String:String] = ["tos":"Star Trek", "tas":"Star Trek: The Animated Series", "tng":"Star Trek: The Next Generation", "ds9":"Star Trek: Deep Space Nine", "voy":"Star Trek: Voyager", "ent":"Star Trek: Enterprise", "dsc":"Star Trek: Discovery", "pic":"Star Trek: Picard", "ld":"Star Trek: Lower Decks"]
+    let seriesMapping: [String:String] = [
+        "tos":"Star Trek",
+        "tas":"Star Trek: The Animated Series",
+        "tng":"Star Trek: The Next Generation",
+        "ds9":"Star Trek: Deep Space Nine",
+        "voy":"Star Trek: Voyager",
+        "ent":"Star Trek: Enterprise",
+        "dsc":"Star Trek: Discovery",
+        "pic":"Star Trek: Picard",
+        "ld" :"Star Trek: Lower Decks"]
     
     //MARK: - App logic methods
     
@@ -25,53 +34,12 @@ struct ResultView: View {
         for episode in parseEpisodes(for: seriesName) {
             episodeList.append(episode)
         }
-        
-//        if seriesName == "Star Trek: The Animated Series" {
-//            episodeList.append(Episode(title: "Beyond the Farthest Star", series: seriesName, season: 1, number: 1))
-//            episodeList.append(Episode(title: "Yesteryear", series: seriesName, season: 1, number: 2))
-//        }
-//
-//        if seriesName == "Star Trek: The Next Generation" {
-//            episodeList.append(Episode(title: "Encounter At Farpoint", series: seriesName, season: 1, number: 1))
-//            episodeList.append(Episode(title: "The Naked Now", series: seriesName, season: 1, number: 3))
-//        }
-//
-//        if seriesName == "Star Trek: Deep Space Nine" {
-//            episodeList.append(Episode(title: "Emissary", series: seriesName, season: 1, number: 1))
-//            episodeList.append(Episode(title: "Past Prologue", series: seriesName, season: 1, number: 3))
-//        }
-//
-//        if seriesName == "Star Trek: Voyager" {
-//            episodeList.append(Episode(title: "Caretaker", series: seriesName, season: 1, number: 1))
-//            episodeList.append(Episode(title: "Parallax", series: seriesName, season: 1, number: 3))
-//        }
-//
-//        if seriesName == "Star Trek: Enterprise" {
-//            episodeList.append(Episode(title: "Broken Bow", series: seriesName, season: 1, number: 1))
-//            episodeList.append(Episode(title: "Fight or Flight", series: seriesName, season: 1, number: 3))
-//        }
-//
-//        if seriesName == "Star Trek: Discovery" {
-//            episodeList.append(Episode(title: "The Vulcan Hello", series: seriesName, season: 1, number: 1))
-//            episodeList.append(Episode(title: "Battle at the Binary Stars", series: seriesName, season: 1, number: 2))
-//        }
-//
-//        if seriesName == "Star Trek: Picard" {
-//            episodeList.append(Episode(title: "Remembrance", series: seriesName, season: 1, number: 1))
-//            episodeList.append(Episode(title: "Maps and Legends", series: seriesName, season: 1, number: 2))
-//        }
-//
-//        if seriesName == "Star Trek: Lower Decks" {
-//            episodeList.append(Episode(title: "Second Contact", series: seriesName, season: 1, number: 1))
-//            episodeList.append(Episode(title: "Envoys", series: seriesName, season: 1, number: 2))
-//        }
 
         return Series(episodes: episodeList)
     }
     
     func parseEpisodes(for series: String) -> [Episode] {
         var episodes: [Episode] = []
-//        let filePath = Bundle.main.(forResource: series, withExtension: "")
         let resourcePath = Bundle.main.resourcePath ?? ""
         let filePath = "\(resourcePath)/\(series).txt"
         var fileContent = ""
@@ -79,6 +47,7 @@ struct ResultView: View {
         print("Path string: \(filePath)")
         #endif
         
+//        MAKE SURE files do not have an extra space before the tabs as this will mess up the episode number retrieval
         do {
                 try fileContent = String(contentsOfFile: filePath, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
         } catch {
@@ -115,56 +84,56 @@ struct ResultView: View {
         }
         
         if options.tasSelected {
-            let series = createSeries(for: "Star Trek: The Animated Series")
+            let series = createSeries(for: "tas")
             for episode in series.episodes {
                 episodeList.append(episode)
             }
         }
         
         if options.tngSelected {
-            let series = createSeries(for: "Star Trek: The Next Generation")
+            let series = createSeries(for: "tng")
             for episode in series.episodes {
                 episodeList.append(episode)
             }
         }
         
         if options.ds9Selected {
-            let series = createSeries(for: "Star Trek: Deep Space Nine")
+            let series = createSeries(for: "ds9")
             for episode in series.episodes {
                 episodeList.append(episode)
             }
         }
         
         if options.voySelected {
-            let series = createSeries(for: "Star Trek: Voyager")
+            let series = createSeries(for: "voy")
             for episode in series.episodes {
                 episodeList.append(episode)
             }
         }
         
         if options.entSelected {
-            let series = createSeries(for: "Star Trek: Enterprise")
+            let series = createSeries(for: "ent")
             for episode in series.episodes {
                 episodeList.append(episode)
             }
         }
         
         if options.dscSelected {
-            let series = createSeries(for: "Star Trek: Discovery")
+            let series = createSeries(for: "dsc")
             for episode in series.episodes {
                 episodeList.append(episode)
             }
         }
         
         if options.picSelected {
-            let series = createSeries(for: "Star Trek: Picard")
+            let series = createSeries(for: "pic")
             for episode in series.episodes {
                 episodeList.append(episode)
             }
         }
         
         if options.ldSelected {
-            let series = createSeries(for: "Star Trek: Lower Decks")
+            let series = createSeries(for: "ld")
             for episode in series.episodes {
                 episodeList.append(episode)
             }
@@ -176,48 +145,6 @@ struct ResultView: View {
     func generateRandomEpisode() -> Episode {
         let episodeList = createIncludedEpisodes(with: applicationOptions)
         let number = Int.random(in: 0..<episodeList.count)
-        
-        #if DEBUG
-        var enabledSeriesString = ""
-        
-        print("Random Number: \(number)")
-        
-        var enabledSeriesList: [String] = []
-        
-        if applicationOptions.tosSelected {
-            enabledSeriesList.append("TOS")
-        }
-        if applicationOptions.tasSelected {
-            enabledSeriesList.append("TAS")
-        }
-        if applicationOptions.tngSelected {
-            enabledSeriesList.append("TNG")
-        }
-        if applicationOptions.ds9Selected {
-            enabledSeriesList.append("DS9")
-        }
-        if applicationOptions.voySelected {
-            enabledSeriesList.append("VOY")
-        }
-        if applicationOptions.entSelected {
-            enabledSeriesList.append("ENT")
-        }
-        if applicationOptions.dscSelected {
-            enabledSeriesList.append("DSC")
-        }
-        if applicationOptions.picSelected {
-            enabledSeriesList.append("PIC")
-        }
-        if applicationOptions.ldSelected {
-            enabledSeriesList.append("LD")
-        }
-        
-        for i in 0..<enabledSeriesList.count {
-            enabledSeriesString.append("\(enabledSeriesList[i]) ")
-        }
-        
-        print("Enabled series: \(enabledSeriesList)")
-        #endif
         
         return episodeList[number]
     }
@@ -265,14 +192,14 @@ struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView() {
             ResultView().navigationBarHidden(true)
-                .environmentObject(Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1))
+                .environmentObject(Options())
         }
         .previewDevice("iPhone 12")
         .preferredColorScheme(.dark)
 
         NavigationView() {
             ResultView().navigationBarHidden(true)
-                .environmentObject(Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1))
+                .environmentObject(Options())
         }
         .previewDevice("iPhone 12")
         .preferredColorScheme(.light)

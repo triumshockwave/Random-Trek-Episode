@@ -1,0 +1,10 @@
+Second Contact	1x01	LD-1001	57436.2	2020-08-06
+Envoys	1x02	LD-1002	Unknown	2020-08-13
+Temporal Edict	1x03	LD-1003	57501.4	2020-08-20
+Moist Vessel	1x04	LD-1004	57538.9	2020-08-27
+Cupid's Errant Arrow	1x05	LD-1005	57601.3	2020-09-03
+Terminal Provocations	1x06	LD-1006	57663.9	2020-09-10
+Much Ado About Boimler	1x07	LD-1007	57752.6	2020-09-17
+Veritas	1x08	LD-1008	Unknown	2020-09-24
+Crisis Point	1x09	LD-1009	Unknown	2020-10-01
+No Small Parts	1x10	LD-1010	Unknown	2020-10-08

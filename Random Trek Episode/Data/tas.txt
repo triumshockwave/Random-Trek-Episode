@@ -1,0 +1,22 @@
+Beyond the Farthest Star	1x01	22004	5221.3 - 5221.8	1973-09-08
+Yesteryear	1x02	22003	5373.4	1973-09-15
+One of Our Planets Is Missing	1x03	22007	5371.3 - 5372.1	1973-09-22
+The Lorelei Signal	1x04	22006	5483.7 - 5483.9	1973-09-29
+More Tribbles, More Troubles	1x05	22001	5392.4	1973-10-06
+The Survivor	1x06	22005	5143.3	1973-10-13
+The Infinite Vulcan	1x07	22002	5554.4 -5554.8	1973-10-20
+The Magicks of Megas-Tu	1x08	22009	1254.4	1973-10-27
+Once Upon a Planet	1x09	22017	5591.2	1973-11-03
+Mudd's Passion	1x10	22008	4978.5	1973-11-10
+The Terratin Incident	1x11	22015	5577.3 - 5577.7	1973-11-17
+The Time Trap	1x12	22010	5267.2 - 5267.6	1973-11-24
+The Ambergris Element	1x13	22013	5499.9	1973-12-01
+The Slaver Weapon	1x14	22011	4187.3	1973-12-15
+The Eye of the Beholder	1x15	22016	5501.2	1974-01-05
+The Jihad	1x16	22014	5683.1	1974-01-12
+The Pirates of Orion	2x01	22020	6334.1 - 6335.6	1974-09-07
+Bem	2x02	22018	7403.6	1974-09-14
+The Practical Joker	2x03	22021	3183.3	1974-09-21
+Albatross	2x04	22019	5275.6 - 5276.8	1974-09-28
+How Sharper Than a Serpent's Tooth	2x05	22022	6063.4 - 6063.5	1974-10-05
+The Counter-Clock Incident	2x06	22023	6770.1 - 6770.6	1974-10-12

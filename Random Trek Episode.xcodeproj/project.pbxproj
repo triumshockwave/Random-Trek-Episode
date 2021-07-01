@@ -12,6 +12,14 @@
 		A478C949268C97C8008C1783 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478C948268C97C8008C1783 /* Series.swift */; };
 		A4872C56268AB97400412797 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6DDA32688776E00B21F32 /* SettingsView.swift */; };
 		A496A5EF268E5BB400A76FD3 /* tos.txt in Resources */ = {isa = PBXBuildFile; fileRef = A496A5EE268E5BB400A76FD3 /* tos.txt */; };
+		A496A5F3268E718900A76FD3 /* tas.txt in Resources */ = {isa = PBXBuildFile; fileRef = A496A5F0268E718900A76FD3 /* tas.txt */; };
+		A496A5F5268E718900A76FD3 /* ds9.txt in Resources */ = {isa = PBXBuildFile; fileRef = A496A5F2268E718900A76FD3 /* ds9.txt */; };
+		A496A5F7268E730400A76FD3 /* tng.txt in Resources */ = {isa = PBXBuildFile; fileRef = A496A5F6268E730400A76FD3 /* tng.txt */; };
+		A496A5FA268E791000A76FD3 /* ent.txt in Resources */ = {isa = PBXBuildFile; fileRef = A496A5F8268E791000A76FD3 /* ent.txt */; };
+		A496A5FB268E791000A76FD3 /* voy.txt in Resources */ = {isa = PBXBuildFile; fileRef = A496A5F9268E791000A76FD3 /* voy.txt */; };
+		A496A5FF268E7A4C00A76FD3 /* dsc.txt in Resources */ = {isa = PBXBuildFile; fileRef = A496A5FC268E7A4B00A76FD3 /* dsc.txt */; };
+		A496A600268E7A4C00A76FD3 /* ld.txt in Resources */ = {isa = PBXBuildFile; fileRef = A496A5FD268E7A4B00A76FD3 /* ld.txt */; };
+		A496A601268E7A4C00A76FD3 /* pic.txt in Resources */ = {isa = PBXBuildFile; fileRef = A496A5FE268E7A4C00A76FD3 /* pic.txt */; };
 		A4C6DDA22688776E00B21F32 /* Random_Trek_EpisodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */; };
 		A4C6DDA62688777200B21F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C6DDA52688777100B21F32 /* Assets.xcassets */; };
 		A4C6DDA92688777200B21F32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C6DDA82688777200B21F32 /* Preview Assets.xcassets */; };
@@ -23,6 +31,14 @@
 		A478C946268BEB8B008C1783 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		A478C948268C97C8008C1783 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		A496A5EE268E5BB400A76FD3 /* tos.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tos.txt; sourceTree = "<group>"; };
+		A496A5F0268E718900A76FD3 /* tas.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tas.txt; sourceTree = "<group>"; };
+		A496A5F2268E718900A76FD3 /* ds9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ds9.txt; sourceTree = "<group>"; };
+		A496A5F6268E730400A76FD3 /* tng.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tng.txt; sourceTree = "<group>"; };
+		A496A5F8268E791000A76FD3 /* ent.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ent.txt; sourceTree = "<group>"; };
+		A496A5F9268E791000A76FD3 /* voy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = voy.txt; sourceTree = "<group>"; };
+		A496A5FC268E7A4B00A76FD3 /* dsc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsc.txt; sourceTree = "<group>"; };
+		A496A5FD268E7A4B00A76FD3 /* ld.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ld.txt; sourceTree = "<group>"; };
+		A496A5FE268E7A4C00A76FD3 /* pic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pic.txt; sourceTree = "<group>"; };
 		A4C6DD9E2688776E00B21F32 /* Random Trek Episode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random Trek Episode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_Trek_EpisodeApp.swift; sourceTree = "<group>"; };
 		A4C6DDA32688776E00B21F32 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -64,6 +80,14 @@
 			isa = PBXGroup;
 			children = (
 				A496A5EE268E5BB400A76FD3 /* tos.txt */,
+				A496A5F0268E718900A76FD3 /* tas.txt */,
+				A496A5F6268E730400A76FD3 /* tng.txt */,
+				A496A5F2268E718900A76FD3 /* ds9.txt */,
+				A496A5F9268E791000A76FD3 /* voy.txt */,
+				A496A5F8268E791000A76FD3 /* ent.txt */,
+				A496A5FC268E7A4B00A76FD3 /* dsc.txt */,
+				A496A5FE268E7A4C00A76FD3 /* pic.txt */,
+				A496A5FD268E7A4B00A76FD3 /* ld.txt */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -175,7 +199,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A496A600268E7A4C00A76FD3 /* ld.txt in Resources */,
+				A496A5FF268E7A4C00A76FD3 /* dsc.txt in Resources */,
+				A496A5F7268E730400A76FD3 /* tng.txt in Resources */,
+				A496A5FA268E791000A76FD3 /* ent.txt in Resources */,
 				A496A5EF268E5BB400A76FD3 /* tos.txt in Resources */,
+				A496A5FB268E791000A76FD3 /* voy.txt in Resources */,
+				A496A5F3268E718900A76FD3 /* tas.txt in Resources */,
+				A496A5F5268E718900A76FD3 /* ds9.txt in Resources */,
+				A496A601268E7A4C00A76FD3 /* pic.txt in Resources */,
 				A4C6DDA92688777200B21F32 /* Preview Assets.xcassets in Resources */,
 				A4C6DDA62688777200B21F32 /* Assets.xcassets in Resources */,
 			);
