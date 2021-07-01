@@ -70,7 +70,8 @@ struct SettingsView: View {
                 .navigationTitle(Text("Settings"))
                 .navigationBarHidden(false)
                 
-                NavigationLink(destination: ResultView(), isActive: $isShowingResult) {
+                NavigationLink(destination: ResultView()
+                                .environmentObject(applicationOptions), isActive: $isShowingResult) {
                     if !isShowingResult {
                         Button(action: { isShowingResult.toggle() }) {
                             Text("Engage")

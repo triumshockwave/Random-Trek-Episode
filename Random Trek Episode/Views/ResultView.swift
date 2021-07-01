@@ -10,14 +10,13 @@ import SwiftUI
 struct ResultView: View {
     @Environment(\.presentationMode) var presentation
     @EnvironmentObject var applicationOptions: Options
-    @State private var chosenEpisode = Episode(title: "The Man Trap", series: "Star Trek", season: 1, number: 1)
-    var episodeList: [Episode] = []
     
-    init() {
-        createIncludedEpisodes(with: applicationOptions)
-    }
+    @State private var chosenEpisode = Episode(title: "Episode Name", series: "Series Name", season: 0, number: 0)
+    @State private var episodeList: [Episode] = []
     
-    mutating func createIncludedEpisodes(with options: Options) {
+    func createIncludedEpisodes(with options: Options) {
+        episodeList = []
+        
         if options.tosSelected {
             let tosSeries = createSeries(for: "Star Trek")
             for episode in tosSeries.episodes {
@@ -53,9 +52,9 @@ struct ResultView: View {
 //    @State private var episodeNumber = 1
 //    @State private var title = "The Man Trap"
         
-    func generateRandomEpisode() {
-        let number = Int.random(in: 0...episodeli)
-
+    func generateRandomEpisode() -> Episode {
+        createIncludedEpisodes(with: applicationOptions)
+        let number = Int.random(in: 0..<episodeList.count)
         
         #if DEBUG
         var enabledSeriesString = ""
@@ -98,6 +97,8 @@ struct ResultView: View {
         
         print("Enabled series: \(enabledSeriesList)")
         #endif
+        
+        return episodeList[number]
     }
     
     var body: some View {
@@ -114,28 +115,20 @@ struct ResultView: View {
                         .fontWeight(.bold)
                         .padding(.top, 10.0)
                 }
+                .onAppear() {
+                    chosenEpisode = generateRandomEpisode()
+                }
                 Spacer()
             }
             Spacer()
             ZStack() {
-                Button(action: { generateRandomEpisode() }) {
+                Button(action: { chosenEpisode = generateRandomEpisode() }) {
                     Text("Engage")
                         .padding()
                         .foregroundColor(Color.white)
                         .background(Color.blue)
                         .clipShape(Capsule())
                 }
-//                if UIDevice.current.userInterfaceIdiom == .phone {
-//                    HStack(alignment: .center) {
-//                        Spacer()
-//                        Button(action: { self.presentation.wrappedValue.dismiss() }) {
-//                            Image(systemName: "gear")
-//                                .resizable()
-//                                .foregroundColor(Color.primary)
-//                                .frame(width: 30, height: 30)
-//                        }
-//                    }
-//                }
             }
         }
         .padding()
