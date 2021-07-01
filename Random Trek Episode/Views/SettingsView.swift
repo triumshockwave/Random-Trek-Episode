@@ -21,24 +21,18 @@ struct SettingsView: View {
     @State private var dscState = true
     @State private var picState = true
     @State private var ldState = true
-    @State private var isShowingResult = true
-    
-    init() {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            isShowingResult = false
-        }
-    }
+    @State private var isShowingResult = false
     
     //MARK: - View hierarchy
     
     var body: some View {
         NavigationView() {
             VStack() {
-                Text("Random Trek Episode")
-                    .font(.title3)
-                    .fontWeight(.heavy)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+//                Text("Random Trek Episode")
+//                    .font(.title3)
+//                    .fontWeight(.heavy)
+//                    .multilineTextAlignment(.leading)
+//                    .frame(maxWidth: .infinity, alignment: .leading)
                     
                 Form() {
                     Section(header: Text("Series Selection")) {
@@ -78,7 +72,7 @@ struct SettingsView: View {
                                 .environmentObject(applicationOptions), isActive: $isShowingResult) {
                     if !isShowingResult {
                         Button(action: { isShowingResult.toggle() }) {
-                            Text("Engage")
+                            Text("Show Result")
                                 .padding()
                                 .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
                                 .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
@@ -86,6 +80,12 @@ struct SettingsView: View {
                         }
                     } else {
                         EmptyView()
+                    }
+                }
+                .onAppear() {
+                    // Make sure the preview actually shows the Settings view instead of pushing Results in front of it
+                    if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
+                        isShowingResult = false
                     }
                 }
             }
