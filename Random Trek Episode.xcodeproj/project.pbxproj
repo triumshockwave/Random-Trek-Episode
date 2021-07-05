@@ -355,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Random Trek Episode/Random Trek Episode.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.1.0b;
 				DEVELOPMENT_ASSET_PATHS = "\"Random Trek Episode/Preview Content\"";
 				DEVELOPMENT_TEAM = PFR4DE3555;
 				ENABLE_PREVIEWS = YES;
@@ -365,6 +365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mac-anu.Random-Trek-Episode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -380,7 +381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Random Trek Episode/Random Trek Episode.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.1.0b;
 				DEVELOPMENT_ASSET_PATHS = "\"Random Trek Episode/Preview Content\"";
 				DEVELOPMENT_TEAM = PFR4DE3555;
 				ENABLE_PREVIEWS = YES;
@@ -390,6 +391,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mac-anu.Random-Trek-Episode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
