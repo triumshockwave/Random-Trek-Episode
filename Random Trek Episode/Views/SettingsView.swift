@@ -23,6 +23,12 @@ struct SettingsView: View {
     @State private var ldState = true
     @State private var isShowingResult = false
     
+    //MARK: - App Logic Methods
+    
+    func toggleAllOn() {
+        
+    }
+    
     //MARK: - View hierarchy
     
     var body: some View {
