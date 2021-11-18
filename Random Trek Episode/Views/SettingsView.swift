@@ -58,10 +58,37 @@ struct SettingsView: View {
                             Text("LD")
                         }
                     }
+                    Section(header: Text("Toggle All")) {
+                        HStack() {
+                            Spacer()
+                            Button(action: {}) {
+                                Text("On")
+                            }
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 10)
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                            .clipShape(Capsule())
+                            
+                            Spacer()
+                            
+                            Button(action: {}) {
+                                Text("Off")
+                            }
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 10)
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                            .clipShape(Capsule())
+                            
+                            Spacer()
+                        }
+
+                    }
                 }
                 .navigationTitle(Text("LCARS Access"))
                 .navigationBarHidden(false)
-                
+                                
                 NavigationLink(destination: ResultView()
                                 .environmentObject(applicationOptions), isActive: $isShowingResult) {
                     if !isShowingResult {
