@@ -7,17 +7,19 @@
 
 import Foundation
 
-struct Series {
+struct Series: Identifiable {
     var seriesTitle: String
     var abbreviation: String
     var isSelected: Bool
     var episodes: [Episode]
+    let id: UUID
     
     init(seriesTitle: String, abbreviation: String, isSelected: Bool, episodes: [Episode]) {
         self.seriesTitle = seriesTitle
         self.abbreviation = abbreviation
         self.isSelected = isSelected
         self.episodes = episodes
+        self.id = UUID()
         
         self.parseEpisodes()        
     }

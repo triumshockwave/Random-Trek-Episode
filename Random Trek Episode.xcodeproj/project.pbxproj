@@ -69,11 +69,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A496A5E7268D910E00A76FD3 /* App Logic */ = {
+		A496A5E7268D910E00A76FD3 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */,
 			);
-			path = "App Logic";
+			path = App;
 			sourceTree = "<group>";
 		};
 		A496A5ED268E5BA600A76FD3 /* Data */ = {
@@ -112,9 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				A496A5ED268E5BA600A76FD3 /* Data */,
-				A4C6DDA12688776E00B21F32 /* Random_Trek_EpisodeApp.swift */,
 				A4872C55268AA19300412797 /* Views */,
-				A496A5E7268D910E00A76FD3 /* App Logic */,
+				A496A5E7268D910E00A76FD3 /* App */,
 				A4C6DDB0268877AB00B21F32 /* Model */,
 				A4C6DDB52688790400B21F32 /* Random Trek Episode.entitlements */,
 				A4C6DDA52688777100B21F32 /* Assets.xcassets */,

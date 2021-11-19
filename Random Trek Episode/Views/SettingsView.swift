@@ -36,6 +36,7 @@ struct SettingsView: View {
             VStack() {                    
                 Form() {
                     Section(header: Text("Series Selection")) {
+                        
                         Toggle(isOn: $applicationOptions.tosSelected) {
                             Text("TOS")
                         }

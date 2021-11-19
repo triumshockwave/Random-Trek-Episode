@@ -19,15 +19,15 @@ class Options: ObservableObject {
     @Published var picSelected = true
     @Published var ldSelected  = true
     
-    @Published var seriesList: [String:Series] = [
-        "TOS": Series(seriesTitle: "The Original Series", abbreviation: "TOS", isSelected: true, episodes: []),
-        "TAS": Series(seriesTitle: "The Animated Series", abbreviation: "TAS", isSelected: true, episodes: []),
-        "TNG": Series(seriesTitle: "The Next Generation", abbreviation: "TNG", isSelected: true, episodes: []),
-        "DS9": Series(seriesTitle: "Deep Space Nine", abbreviation: "DS9", isSelected: true, episodes: []),
-        "VOY": Series(seriesTitle: "Voyager", abbreviation: "VOY", isSelected: true, episodes: []),
-        "ENT": Series(seriesTitle: "Enterprise", abbreviation: "ENT", isSelected: true, episodes: []),
-        "DSC": Series(seriesTitle: "Discovery", abbreviation: "DSC", isSelected: true, episodes: []),
-        "PIC": Series(seriesTitle: "Picard", abbreviation: "PIC", isSelected: true, episodes: []),
-        "LD":  Series(seriesTitle: "Lower Decks", abbreviation: "LD", isSelected: true, episodes: [])
+    @Published var seriesList: [Series] = [
+        Series(seriesTitle: "The Original Series", abbreviation: "TOS", isSelected: true, episodes: []),
+        Series(seriesTitle: "The Animated Series", abbreviation: "TAS", isSelected: true, episodes: []),
+        Series(seriesTitle: "The Next Generation", abbreviation: "TNG", isSelected: true, episodes: []),
+        Series(seriesTitle: "Deep Space Nine", abbreviation: "DS9", isSelected: true, episodes: []),
+        Series(seriesTitle: "Voyager", abbreviation: "VOY", isSelected: true, episodes: []),
+        Series(seriesTitle: "Enterprise", abbreviation: "ENT", isSelected: true, episodes: []),
+        Series(seriesTitle: "Discovery", abbreviation: "DSC", isSelected: true, episodes: []),
+        Series(seriesTitle: "Picard", abbreviation: "PIC", isSelected: true, episodes: []),
+        Series(seriesTitle: "Lower Decks", abbreviation: "LD", isSelected: true, episodes: [])
     ]
 }

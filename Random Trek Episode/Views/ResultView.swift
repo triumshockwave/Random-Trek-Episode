@@ -15,23 +15,12 @@ struct ResultView: View {
     
     @State private var chosenEpisode = Episode(title: "Episode Name", series: "Series Name", season: 0, number: 0)
     
-    let seriesMapping: [String:String] = [
-        "tos":"Star Trek",
-        "tas":"Star Trek: The Animated Series",
-        "tng":"Star Trek: The Next Generation",
-        "ds9":"Star Trek: Deep Space Nine",
-        "voy":"Star Trek: Voyager",
-        "ent":"Star Trek: Enterprise",
-        "dsc":"Star Trek: Discovery",
-        "pic":"Star Trek: Picard",
-        "ld" :"Star Trek: Lower Decks"]
-    
     //MARK: - App logic methods
     
     func createIncludedEpisodes(with options: Options) -> [Episode] {
         var episodeList: [Episode] = []
         
-        for (_,series) in options.seriesList {
+        for (series) in options.seriesList {
             if series.isSelected {
                 for episode in series.episodes {
                     episodeList.append(episode)
@@ -44,6 +33,9 @@ struct ResultView: View {
         
     func generateRandomEpisode() -> Episode {
         let episodeList = createIncludedEpisodes(with: applicationOptions)
+        if episodeList.isEmpty {
+            return Episode(title: "", series: "No Series Selected", season: 0, number: 0)
+        }
         let number = Int.random(in: 0..<episodeList.count)
         
         return episodeList[number]
