@@ -12,15 +12,6 @@ struct SettingsView: View {
     
     @EnvironmentObject var applicationOptions: Options
     
-    @State private var tosState = true
-    @State private var tasState = true
-    @State private var tngState = true
-    @State private var ds9State = true
-    @State private var voyState = true
-    @State private var entState = true
-    @State private var dscState = true
-    @State private var picState = true
-    @State private var ldState = true
     @State private var isShowingResult = false
     
     //MARK: - App Logic Methods
