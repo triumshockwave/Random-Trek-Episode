@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Series: Identifiable {
+class Series: Identifiable, ObservableObject {
     var seriesTitle: String
     var abbreviation: String
     var isSelected: Bool
@@ -24,7 +24,7 @@ struct Series: Identifiable {
         self.parseEpisodes()        
     }
     
-    mutating func parseEpisodes() {
+    func parseEpisodes() {
         let resourcePath = Bundle.main.resourcePath ?? ""
         let filePath = "\(resourcePath)/\(abbreviation.lowercased()).txt"
         var fileContent = ""
@@ -55,7 +55,4 @@ struct Series: Identifiable {
         }
     }
     
-//    mutating func add(episode: Episode) {
-//        episodes.append(episode)
-//    }
 }
