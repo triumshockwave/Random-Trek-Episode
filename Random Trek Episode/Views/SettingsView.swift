@@ -20,6 +20,10 @@ struct SettingsView: View {
         
     }
     
+    func toggleAllOff() {
+        
+    }
+    
     //MARK: - View hierarchy
     
     var body: some View {
@@ -59,7 +63,7 @@ struct SettingsView: View {
                     Section(header: Text("Toggle All")) {
                         HStack() {
                             Spacer()
-                            Button(action: {}) {
+                            Button(action: toggleAllOn) {
                                 Text("On")
                             }
                             .padding(.horizontal, 20)
@@ -70,7 +74,7 @@ struct SettingsView: View {
                             
                             Spacer()
                             
-                            Button(action: {}) {
+                            Button(action: toggleAllOff) {
                                 Text("Off")
                             }
                             .padding(.horizontal, 20)
