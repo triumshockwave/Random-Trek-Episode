@@ -28,32 +28,32 @@ struct SettingsView: View {
                 Form() {
                     Section(header: Text("Series Selection")) {
                         
-                        Toggle(isOn: $applicationOptions.tosSelected) {
-                            Text("TOS")
+                        Toggle(isOn: $applicationOptions.seriesList[0].isSelected) {
+                            Text(applicationOptions.seriesList[0].abbreviation)
                         }
-                        Toggle(isOn: $applicationOptions.tasSelected) {
-                            Text("TAS")
+                        Toggle(isOn: $applicationOptions.seriesList[1].isSelected) {
+                            Text(applicationOptions.seriesList[1].abbreviation)
                         }
-                        Toggle(isOn: $applicationOptions.tngSelected) {
-                            Text("TNG")
+                        Toggle(isOn: $applicationOptions.seriesList[2].isSelected) {
+                            Text(applicationOptions.seriesList[2].abbreviation)
                         }
-                        Toggle(isOn: $applicationOptions.ds9Selected) {
-                            Text("DS9")
+                        Toggle(isOn: $applicationOptions.seriesList[3].isSelected) {
+                            Text(applicationOptions.seriesList[3].abbreviation)
                         }
-                        Toggle(isOn: $applicationOptions.voySelected) {
-                            Text("VOY")
+                        Toggle(isOn: $applicationOptions.seriesList[4].isSelected) {
+                            Text(applicationOptions.seriesList[4].abbreviation)
                         }
-                        Toggle(isOn: $applicationOptions.entSelected) {
-                            Text("ENT")
+                        Toggle(isOn: $applicationOptions.seriesList[5].isSelected) {
+                            Text(applicationOptions.seriesList[5].abbreviation)
                         }
-                        Toggle(isOn: $applicationOptions.dscSelected) {
-                            Text("DSC")
+                        Toggle(isOn: $applicationOptions.seriesList[6].isSelected) {
+                            Text(applicationOptions.seriesList[6].abbreviation)
                         }
-                        Toggle(isOn: $applicationOptions.picSelected) {
-                            Text("PIC")
+                        Toggle(isOn: $applicationOptions.seriesList[7].isSelected) {
+                            Text(applicationOptions.seriesList[7].abbreviation)
                         }
-                        Toggle(isOn: $applicationOptions.ldSelected) {
-                            Text("LD")
+                        Toggle(isOn: $applicationOptions.seriesList[8].isSelected) {
+                            Text(applicationOptions.seriesList[8].abbreviation)
                         }
                     }
                     Section(header: Text("Toggle All")) {
