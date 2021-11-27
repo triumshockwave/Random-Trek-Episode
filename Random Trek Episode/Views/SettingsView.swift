@@ -17,11 +17,17 @@ struct SettingsView: View {
     //MARK: - App Logic Methods
     
     func toggleAllOn() {
-
+        for i in applicationOptions.seriesList.indices {
+            let currentSeries = $applicationOptions.seriesList[i]
+            currentSeries.isSelected.wrappedValue = true
+        }
     }
     
     func toggleAllOff() {
-
+        for i in applicationOptions.seriesList.indices {
+            let currentSeries = $applicationOptions.seriesList[i]
+            currentSeries.isSelected.wrappedValue = false
+        }
     }
     
     //MARK: - View hierarchy
@@ -39,37 +45,44 @@ struct SettingsView: View {
                         }
                         
                     }
-                    Section(header: Text("Toggle All")) {
-                        HStack() {
-                            Spacer()
-                            Button(action: toggleAllOn) {
-                                Text("On")
-                            }
-                            .padding(.horizontal, 20)
-                            .padding(.vertical, 10)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
-                            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
-                            .clipShape(Capsule())
-                            
-                            Spacer()
-                            
-                            Button(action: toggleAllOff) {
-                                Text("Off")
-                            }
-                            .padding(.horizontal, 20)
-                            .padding(.vertical, 10)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
-                            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
-                            .clipShape(Capsule())
-                            
-                            Spacer()
-                        }
 
-                    }
                 }
                 .navigationTitle(Text("LCARS Access"))
                 .navigationBarHidden(false)
-                                
+                .frame(height: 460)
+                
+//                Divider()
+                
+                VStack() {
+                    Text("Toggle All")
+                    HStack() {
+                        Spacer()
+                        Button(action: toggleAllOn) {
+                            Text("On")
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                        .clipShape(Capsule())
+                        
+                        Spacer()
+                        
+                        Button(action: toggleAllOff) {
+                            Text("Off")
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                        .clipShape(Capsule())
+
+                        Spacer()
+                    }
+                }
+                
+                Spacer()
+                
                 NavigationLink(destination: ResultView()
                                 .environmentObject(applicationOptions), isActive: $isShowingResult) {
                     if !isShowingResult {
@@ -84,6 +97,8 @@ struct SettingsView: View {
                         EmptyView()
                     }
                 }
+                
+                Spacer()
             }
         }
         .onAppear() {
