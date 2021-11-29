@@ -7,10 +7,10 @@
 
 import Foundation
 
-class Series: Identifiable, ObservableObject {
+class Series: Identifiable{
     var seriesTitle: String
     var abbreviation: String
-    @Published var isSelected: Bool
+    var isSelected: Bool
     var episodes: [Episode]
     let id: UUID
     
