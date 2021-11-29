@@ -22,4 +22,23 @@ class Options: ObservableObject {
         self.seriesList.append(Series(seriesTitle: "Picard", abbreviation: "PIC", isSelected: true, episodes: []))
         self.seriesList.append(Series(seriesTitle: "Lower Decks", abbreviation: "LD", isSelected: true, episodes: []))
     }
+    
+    func saveDefaults() {
+        let defaults = UserDefaults.standard
+        for i in self.seriesList.indices {
+            let currentSeries = self.seriesList[i]
+            let key = currentSeries.abbreviation
+            defaults.set(currentSeries.isSelected, forKey: key)
+        }
+    }
+    
+    func loadDefaults() {
+        let defaults = UserDefaults.standard
+        for i in self.seriesList.indices {
+            let currentSeries = self.seriesList[i]
+            let key = currentSeries.abbreviation
+            let savedValue = defaults.bool(forKey: key)
+            currentSeries.isSelected = savedValue
+        }
+    }
 }
