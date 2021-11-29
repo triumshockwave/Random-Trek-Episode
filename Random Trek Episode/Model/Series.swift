@@ -7,17 +7,30 @@
 
 import Foundation
 
-class Series: Identifiable{
+class Series: Identifiable {
     var seriesTitle: String
     var abbreviation: String
-    var isSelected: Bool
+    var _isSelected: Bool  // This is a hack to avoid the "self used before all stored properties are initialized" error. This way we initialize this propterty during init() while the other property can handle the Get / Set logic. Maybe there's a better way to handle this?
+    var isSelected: Bool {
+        get {
+            return self._isSelected
+        }
+        set(newValue) {
+            self._isSelected = newValue
+            let defaults = UserDefaults.standard
+            defaults.set(self._isSelected, forKey: self.abbreviation)
+        }
+    }
     var episodes: [Episode]
     let id: UUID
     
-    init(seriesTitle: String, abbreviation: String, isSelected: Bool, episodes: [Episode]) {
+    init(seriesTitle: String, abbreviation: String, episodes: [Episode]) {
         self.seriesTitle = seriesTitle
         self.abbreviation = abbreviation
-        self.isSelected = isSelected
+        
+        let defaults = UserDefaults.standard
+        self._isSelected = defaults.object(forKey: self.abbreviation) as? Bool ?? true
+        
         self.episodes = episodes
         self.id = UUID()
         
@@ -34,7 +47,7 @@ class Series: Identifiable{
         
 //        MAKE SURE files do not have an extra space before the tabs as this will mess up the episode number retrieval
         do {
-                try fileContent = String(contentsOfFile: filePath, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+            try fileContent = String(contentsOfFile: filePath, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
         } catch {
             print("Error reading file content: \(error)")
         }
