@@ -40,3 +40,16 @@ Terra Firma, Part 2	3x10	310	Unknown	2020-12-17
 Su'Kal	3x11	311	Unknown	2020-12-24
 There Is A Tide...	3x12	312	Unknown	2020-12-31
 That Hope Is You, Part 2	3x13	313	Unknown	2021-01-07
+Kobayashi Maru	4x01	401	Unknown	2021-11-18
+Anomaly (DIS)	4x02	402	Unknown	2021-11-25
+Choose to Live	4x03	403	Unknown	2021-12-02
+All Is Possible	4x04	404	865661.2	2021-12-09
+The Examples	4x05	405	Unknown	2021-12-16
+Stormy Weather	4x06	406	Unknown	2021-12-23
+...But to Connect	4x07	407	Unknown	2021-12-30
+All In	4x08	408	Unknown	2022-02-10
+Rubicon	4x09	409	Unknown	2022-02-17
+The Galactic Barrier	4x10	410	Unknown	2022-02-24
+Rosetta	4x11	411	865783.7	2022-03-03
+Species Ten-C	4x12	412	Unknown	2022-03-10
+Coming Home	4x13	413	Unknown	2022-03-17

@@ -8,3 +8,23 @@ Much Ado About Boimler	1x07	LD-1007	57752.6	2020-09-17
 Veritas	1x08	LD-1008	Unknown	2020-09-24
 Crisis Point	1x09	LD-1009	Unknown	2020-10-01
 No Small Parts	1x10	LD-1010	Unknown	2020-10-08
+Strange Energies	2x01	LD-2001	Unknown	2021-08-12
+Kayshon, His Eyes Open	2x02	LD-2002	58001.2	2021-08-19
+We'll Always Have Tom Paris	2x03	LD-2003	Unknown	2021-08-26
+Mugato, Gumato	2x04	LD-2004	58036.4	2021-09-02
+An Embarrassment Of Dooplers	2x05	LD-2005	58053.9	2021-09-09
+The Spy Humongous	2x06	LD-2006	58105.1	2021-09-16
+Where Pleasant Fountains Lie	2x07	LD-2007	Unknown	2021-09-23
+I, Excretus	2x08	LD-2008	Unknown	2021-09-30
+wej Duj	2x09	LD-2009	Unknown	2021-10-07
+First First Contact	2x10	LD-2010	58130.6	2021-10-14
+Grounded	3x01	LD-3001	Unknown	2022-08-25
+The Least Dangerous Game	3x02	LD-3002	Unknown	2022-09-01
+Mining The Mind's Mines	3x03	LD-3003	58256.2	2022-09-08
+Room for Growth	3x04	LD-3004	Unknown	2022-09-15
+Reflections	3x05	LD-3005	58354.2	2022-09-22
+Hear All, Trust Nothing	3x06	LD-3006	58456.2	2022-09-29
+A Mathematically Perfect Redemption	3x07	LD-3007	Unknown	2022-10-06
+Crisis Point 2: Paradoxus	3x08	LD-3008	Unknown	2022-10-13
+Trusted Sources	3x09	LD-3009	58496.1	2022-10-20
+The Stars At Night	3x10	LD-3010	58499.2	2022-10-27

@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A4080CC72689875600FE06DF /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4080CC62689875600FE06DF /* ResultView.swift */; };
+		A44FA3F729FDB55900C0C9CF /* pro.txt in Resources */ = {isa = PBXBuildFile; fileRef = A44FA3F529FDB55900C0C9CF /* pro.txt */; };
+		A44FA3F829FDB55900C0C9CF /* snw.txt in Resources */ = {isa = PBXBuildFile; fileRef = A44FA3F629FDB55900C0C9CF /* snw.txt */; };
 		A478C947268BEB8B008C1783 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478C946268BEB8B008C1783 /* Options.swift */; };
 		A478C949268C97C8008C1783 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478C948268C97C8008C1783 /* Series.swift */; };
 		A4872C56268AB97400412797 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6DDA32688776E00B21F32 /* SettingsView.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		A4080CC62689875600FE06DF /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		A44FA3F529FDB55900C0C9CF /* pro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pro.txt; sourceTree = "<group>"; };
+		A44FA3F629FDB55900C0C9CF /* snw.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = snw.txt; sourceTree = "<group>"; };
 		A478C946268BEB8B008C1783 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		A478C948268C97C8008C1783 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		A496A5EE268E5BB400A76FD3 /* tos.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tos.txt; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				A496A5FC268E7A4B00A76FD3 /* dsc.txt */,
 				A496A5FE268E7A4C00A76FD3 /* pic.txt */,
 				A496A5FD268E7A4B00A76FD3 /* ld.txt */,
+				A44FA3F529FDB55900C0C9CF /* pro.txt */,
+				A44FA3F629FDB55900C0C9CF /* snw.txt */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -168,8 +174,9 @@
 		A4C6DD962688776E00B21F32 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					A4C6DD9D2688776E00B21F32 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -205,7 +212,9 @@
 				A496A5FA268E791000A76FD3 /* ent.txt in Resources */,
 				A496A5EF268E5BB400A76FD3 /* tos.txt in Resources */,
 				A496A5FB268E791000A76FD3 /* voy.txt in Resources */,
+				A44FA3F729FDB55900C0C9CF /* pro.txt in Resources */,
 				A496A5F3268E718900A76FD3 /* tas.txt in Resources */,
+				A44FA3F829FDB55900C0C9CF /* snw.txt in Resources */,
 				A496A5F5268E718900A76FD3 /* ds9.txt in Resources */,
 				A496A601268E7A4C00A76FD3 /* pic.txt in Resources */,
 				A4C6DDA92688777200B21F32 /* Preview Assets.xcassets in Resources */,

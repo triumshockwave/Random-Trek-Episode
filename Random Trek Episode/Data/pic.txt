@@ -8,3 +8,23 @@ Nepenthe	1x07	106	Unknown	2020-03-05
 Broken Pieces	1x08	107	Unknown	2020-03-12
 Et in Arcadia Ego, Part 1	1x09	108	Unknown	2020-03-19
 Et in Arcadia Ego, Part 2	1x10	109	Unknown	2020-03-26
+The Star Gazer	2x01	201	2401	2022-03-03
+Penance	2x02	202	2401	2022-03-10
+Assimilation	2x03	203	2401 / April 12, 2024	2022-03-17
+Watcher	2x04	204	April 12, 2024	2022-03-24
+Fly Me to the Moon	2x05	205	April 12, 2024	2022-03-31
+Two of One	2x06	206	April 12, 2024	2022-04-07
+Monsters	2x07	207	April 13, 2024	2022-04-14
+Mercy	2x08	208	April 13-14, 2024	2022-04-21
+Hide and Seek	2x09	209	April 14, 2024	2022-04-28
+Farewell	2x10	210	2024 / 2401	2022-05-05
+The Next Generation	3x01	301	2401	2023-02-16
+Disengage	3x02	302	2401	2023-02-23
+Seventeen Seconds	3x03	303	2401 / 2381	2023-03-02
+No Win Scenario	3x04	304	2401 (78183.10) / 2396	2023-03-09
+Imposters	3x05	305	2401 (78186.03)	2023-03-16
+The Bounty	3x06	306	2401	2023-03-23
+Dominion	3x07	307	2401 / 2370s	2023-03-30
+Surrender	3x08	308	2401	2023-04-06
+Võx	3x09	309	April, 2401	2023-04-13
+The Last Generation	3x10	310	April 2401 / 2402	2023-04-20

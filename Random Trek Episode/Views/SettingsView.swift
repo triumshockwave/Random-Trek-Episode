@@ -37,8 +37,7 @@ struct SettingsView: View {
             VStack() {                    
                 Form() {
                     Section(header: Text("Series Selection")) {
-                        
-                        ForEach(applicationOptions.seriesList.indices) { i in
+                        ForEach(applicationOptions.seriesList.indices, id: \.self) { i in
                             Toggle(isOn: $applicationOptions.seriesList[i].isSelected) {
                                 Text(applicationOptions.seriesList[i].abbreviation)
                             }
@@ -49,7 +48,7 @@ struct SettingsView: View {
                 }
                 .navigationTitle(Text("LCARS Access"))
                 .navigationBarHidden(false)
-                .frame(height: 460)
+//                .frame(height: 460)
                 
 //                Divider()
                 
